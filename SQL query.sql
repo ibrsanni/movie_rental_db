@@ -1,5 +1,8 @@
 
 /*Query 1 - query used for first insight (S1/Q1)*/
+/*We want to understand more about the movies that families are watching. The following categories are considered family movies: Animation, Children, Classics, Comedy, Family and Music.
+Create a query that lists each movie, the film category it is classified in, and the number of times it has been rented out.*/
+
 WITH table1
 AS (
 	SELECT
@@ -44,6 +47,9 @@ ORDER BY
 		2 DESC;
 
 /*Query 2 - query used for second insight(S1/Q3)*/
+/*Provide a table with the family-friendly film category, each of the quartiles, and the corresponding count of movies within each combination of film category for each corresponding rental duration category. 
+The resulting table should have three columns:Category, Rental length category, Count */
+
 WITH table1
 AS (
 	SELECT
@@ -80,6 +86,10 @@ ORDER BY
      2;
 
 /*Query 3 - query used for third insight(S2/Q1)*/
+/*Write a query
+that returns the store ID for the store, the year and month and the number of rental orders each store has fulfilled for that month. Your table should include a column for each of the
+following: year, month, store ID and count of rental orders fulfilled during that month.*/
+
 WITH table1
 AS (
 	SELECT
@@ -109,6 +119,9 @@ ORDER BY
 	  4 DESC;
 
 /*Query 4 - query used for forth insight(S2/Q2)*/
+/*We would like to know who were our top 10 paying customers, how many payments they made on a monthly basis during 2007, and what was the amount of the monthly payments. 
+Can you write a query to capture the customer name, month and year of payment, and total payment amount for each month by these top 10 paying customers?*/
+
 SELECT
 	DISTINCT (payment_month),
 	first_name || ' ' || last_name AS full_name,
